@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -54,6 +58,23 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.select-trigger {
+  @apply text-gray-800;
+}
+.select-placeholder {
+  @apply text-gray-500;
+}
+
+.select-item:hover {
+  @apply bg-gray-200;
+  @apply text-gray-900;
+}
+
+::placeholder {
+  color: gray;
+  opacity: 1;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -64,5 +85,11 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
   }
 }
